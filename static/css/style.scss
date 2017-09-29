@@ -1,6 +1,8 @@
 // compileCompressed: style.css
 
 $wah: #236478;
+$white: #FFFFFF;
+$dark: #232323;
 
 body {
     font-family: 'Assistant', sans-serif;
@@ -25,7 +27,7 @@ strong, b {
             float: right;
         }
     }
-    background-color: #232323;
+    background-color: $dark;
     padding: 10px 0;
     text-align: center;
     position: fixed;
@@ -384,7 +386,7 @@ span.error {
         width: 100%;
         height: auto;
         padding: 20px 0;
-        background-color: #232323;
+        background-color: $dark;
         &.open {
             display: block;
             top: 100%;
@@ -402,6 +404,37 @@ span.error {
     }
 }
 
+.footer-bottom-section {
+    background: $dark;
+    color: $white;
+    padding: 20px 0;
+    .wah-credits {
+        direction: rtl;
+    }
+    .wah-share {
+        text-align: right;
+        direction: rtl;
+        display: inline-block;
+        width: 100%;
+        clear: both;
+        a {
+            margin-left: 20px;
+            float: right;
+            &:last-child {
+                margin-left: 0;
+            }
+        }
+    }
+    a {
+        color: $white;
+        text-decoration: underline;
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+}
+
 @media only screen and (max-width:960px) {
     .logo {
         margin-right: 50px;
@@ -409,6 +442,9 @@ span.error {
     #nav-icon2 {
         display: block;
     }
+    .wah-share {
+        margin-bottom: 20px;
+    }    
 }
 
 @media only screen and (max-width:640px) {
@@ -473,6 +509,7 @@ span.error {
         font-size: 18px;
         font-weight: bold;
     }
+
 }
 
 
